@@ -1,4 +1,4 @@
-<h1>	List Operations</h2>
+#List Operations
 
 You will be given a list of integer numbers on the first line of input. You will be receiving operations you have to apply on the list until you receive the "End" command. The possible commands are:
 
@@ -14,7 +14,7 @@ You will be given a list of integer numbers on the first line of input. You will
 
 Note: there is a possibility that the given index is outside of the bounds of the array. In that case print "Invalid index"
 
-<h2>Examples</h2>
+##Examples
 
 > Input
 
