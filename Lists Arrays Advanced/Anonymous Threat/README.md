@@ -1,4 +1,5 @@
-<h1>Anonymous Threat</h1>
+#Anonymous Threat
+
 The Anonymous have created a cyber hypervirus, which steals data from the CIA. You, as the lead security developer in CIA, have been tasked to analyze the software of the virus and observe its actions on the data. The virus is known for his innovative and unbeleivably clever technique of merging and dividing data into partitions.
 
 You will receive a single input line, containing strings, separated by spaces. The strings may contain any ASCII character except whitespace.Then you will begin receiving commands in one of the following formats:
@@ -35,7 +36,7 @@ Constrains
 -	The partitions will be in range [0, 100].
 -	Allowed working time/memory: 100ms / 16MB.
 
-<h2>Examples</h2>
+##Examples
 
 >Input
 
