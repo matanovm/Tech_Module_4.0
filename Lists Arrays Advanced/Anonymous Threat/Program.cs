@@ -25,10 +25,12 @@ namespace Anonymous_Threat
 						{
 							startIndex = 0;
 						}
+
 						if (endIndex >= input.Count || endIndex < 0)
 						{
 							endIndex = input.Count - 1;
 						}
+
 						input = Merge(input, startIndex, endIndex);
 						break;
 
@@ -43,8 +45,10 @@ namespace Anonymous_Threat
 						break;
 				}
 				command = Console.ReadLine();
+
 			}
 			Console.WriteLine(string.Join(" ", input));
+
 		}
 
 		public static List<string> Divide(List<string> input, int index, int partitions)
@@ -70,8 +74,10 @@ namespace Anonymous_Threat
 					}
 				}
 				input.Insert(index + i, part.ToString());
+
 			}
 			return input;
+
 		}
 
 		public static List<string> Merge(List<string> input, int startIndex, int endIndex)
@@ -82,6 +88,7 @@ namespace Anonymous_Threat
 				result.Append(input[i]);
 			}
 			input.RemoveRange(startIndex, endIndex - startIndex + 1);
+
 			input.Insert(startIndex, result.ToString());
 			return input;
 		}
