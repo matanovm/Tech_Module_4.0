@@ -9,7 +9,8 @@ namespace Train
 		static void Main(string[] args)
 		{
 			List<int> wagons = Console.ReadLine().Split().Select(int.Parse).ToList();
-			int capacity = int.Parse(Console.ReadLine());
+			int capacity = int.Parse(
+				Console.ReadLine());
 			string command = Console.ReadLine();
 
 			while (command != "end")
@@ -32,8 +33,11 @@ namespace Train
 					}
 				}
 				command = Console.ReadLine();
+
 			}
-			Console.WriteLine(string.Join(" ", wagons));
+
+			Console.WriteLine(
+				string.Join(" ", wagons));
 		}
 	}
 }
