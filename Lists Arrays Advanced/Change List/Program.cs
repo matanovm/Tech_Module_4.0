@@ -29,8 +29,10 @@ namespace Change_List
 					input.Insert(int.Parse(com[2]), int.Parse(com[1]));
 				}
 				command = Console.ReadLine();
+
 			}
 			Console.WriteLine(string.Join(" ", input));
+
 		}
 	}
 }
