@@ -8,8 +8,12 @@ namespace Pokemon_Don_t_Go
 	{
 		static void Main(string[] args)
 		{
-			List<int> input = Console.ReadLine().Split().Select(int.Parse).ToList();
-			int index = int.Parse(Console.ReadLine());
+			List<int> input = Console.ReadLine()
+				.Split()
+				.Select(int.Parse)
+				.ToList();
+			int index = int.Parse
+				(Console.ReadLine());
 			int sum = 0;
 
 			while (input.Count > 0)
@@ -25,6 +29,7 @@ namespace Pokemon_Don_t_Go
 						break;
 					}
 					input = Calculate(input, indexValue);
+
 				}
 				else if (index < 0)
 				{
@@ -45,9 +50,10 @@ namespace Pokemon_Don_t_Go
 				index = int.Parse(Console.ReadLine());
 			}
 			Console.WriteLine(sum);
+
 		}
 
-		public static List<int> Calculate(List<int> input, int indexValue)
+		private static List<int> Calculate(List<int> input, int indexValue)
 		{
 			for (int i = 0; i < input.Count; i++)
 			{
@@ -60,6 +66,7 @@ namespace Pokemon_Don_t_Go
 					input[i] -= indexValue;
 				}
 			}
+
 			return input;
 		}
 	}
