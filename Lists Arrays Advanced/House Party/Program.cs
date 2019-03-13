@@ -12,53 +12,58 @@ namespace House_Party
 			List<string> list = new List<string>();
 			for (int i = 0; i < count; i++)
 			{
-				string[] command = Console.ReadLine().Split().ToArray();
-				if (command[2] == "going!")
+				string[] command = Console.ReadLine()
+					.Split()
+					.ToArray();
+
+				switch (command[2])
 				{
-					bool isOnTheList = false;
-					if (list.Count > 0)
-					{
-						for (int j = 0; j < list.Count; j++)
+					case "going!":
+						bool isOnTheList = false;
+						if (list.Count > 0)
 						{
-							if (list[j] == command[0])
+							for (int j = 0; j < list.Count; j++)
 							{
-								isOnTheList = true;
+								if (list[j] == command[0])
+								{
+									isOnTheList = true;
+								}
 							}
 						}
-					}
-					if (isOnTheList)
-					{
-						Console.WriteLine($"{command[0]} is already in the list!");
-					}
-					else
-					{
-						list.Add(command[0]);
-					}
-				}
-				else if (command[2] == "not")
-				{
-					bool isNotOnTheList = true;
-					if (list.Count > 0)
-					{
-						for (int j = 0; j < list.Count; j++)
+						if (isOnTheList)
 						{
-							if (list[j] == command[0])
+							Console.WriteLine($"{command[0]} is already in the list!");
+						}
+						else
+						{
+							list.Add(command[0]);
+						}
+						break;
+					case "not":
+						bool isNotOnTheList = true;
+						if (list.Count > 0)
+						{
+							for (int j = 0; j < list.Count; j++)
 							{
-								isNotOnTheList = false;
+								if (list[j] == command[0])
+								{
+									isNotOnTheList = false;
+								}
 							}
 						}
-					}
-					if (isNotOnTheList)
-					{
-						Console.WriteLine($"{command[0]} is not in the list!");
-					}
-					else
-					{
-						list.Remove(command[0]);
-					}
+						if (isNotOnTheList)
+						{
+							Console.WriteLine($"{command[0]} is not in the list!");
+						}
+						else
+						{
+							list.Remove(command[0]);
+						}
+						break;
 				}
 			}
-			foreach (var item in list)
+
+			foreach (string item in list)
 			{
 				Console.WriteLine(item);
 			}
